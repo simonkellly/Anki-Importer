@@ -120,7 +120,7 @@ parsedCards.forEach((t) => {
   const ans = t.answer;
   t.id = `${t.title}::${t.section}::${t.question}`;
   t.answer = ans.join("\n");
-  t.tag = `${t.title}::${t.section}`;
+  t.tag = `${t.title.replace(/\s/g,'')}::${t.section.replace(/\s/g,'')}`;
 });
 
 const converter = require("json-2-csv");
