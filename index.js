@@ -116,6 +116,7 @@ parsedCards.forEach(t => {
     const ans = t.answer;
     t.id = `${t.title}::${t.section}::${t.question}`
     t.answer = ans.join("\n");
+    t.tag = `${t.title}::${t.section}`
 })
 
 fs.writeFileSync(process.cwd() + "/temp.json", JSON.stringify(parsedCards))
