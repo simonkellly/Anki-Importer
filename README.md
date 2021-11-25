@@ -1,6 +1,11 @@
 # Anki Importer
 This tool allows simple markdown notes to be imported into anki
 
+To-Do:
+- Add option to append folder names to tags
+- Support for images
+- Support more markdown tags
+
 Various markdown tags dictate the contents of each card.
 Each of these must be present to generate cards
 Title (#)
