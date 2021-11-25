@@ -72,7 +72,7 @@ function parseText(data) {
     }
 
     if (!flagged || broken) return;
-
+    
     if (text.startsWith("---")) {
       resetCurrentCard();
       return;
@@ -119,7 +119,7 @@ mdFiles.forEach((file) => {
 parsedCards.forEach((t) => {
   const ans = t.answer;
   t.id = `${t.title}::${t.section}::${t.question}`;
-  t.answer = ans.join("\n");
+  t.answer = ans.join("<br>");
   t.tag = `${t.title.replace(/\s/g,'')}::${t.section.replace(/\s/g,'')}`;
 });
 
